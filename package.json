@@ -1,6 +1,6 @@
 {
   "name": "horizon",
-  "description": "a online educational platform",
+  "description": "a json based mvc framework",
   "version": "0.0.1",
   "dependencies": {
     "express": "3.2.6",
