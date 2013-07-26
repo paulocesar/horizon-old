@@ -1,0 +1,13 @@
+html
+  head
+    title horizon
+    block css
+  body
+
+    -while(messages.length)
+      -message = messages.pop()
+      div(class="alert alert-"+message[0],style='text-align:center') !{message[1]}
+    
+    block content
+    
+    block script

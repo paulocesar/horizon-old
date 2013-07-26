@@ -1,0 +1,10 @@
+{
+  "name": "horizon",
+  "description": "a online educational platform",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.2.6",
+    "jade": "0.31.2",
+    "mongoose": "3.6.11"
+  }
+}
