@@ -1,0 +1,12 @@
+body {
+  background-image: url('/img/horizon.jpg');
+  background-size: auto 130%;
+  color: white;
+  background-repeat: repeat-x;
+  font-family: "Courier new";
+}
+
+h1.horizon {
+  margin-left: 10%;
+  margin-top: 5%;
+}

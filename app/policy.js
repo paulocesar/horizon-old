@@ -11,9 +11,4 @@ module.exports = {
     delete : 'auth'
   },
 
-  // ConferenceController : {
-  //   create : 'auth_channel_edit',
-  //   view : 'auth_channel_view'
-  // },
-
 };

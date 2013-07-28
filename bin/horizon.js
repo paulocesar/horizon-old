@@ -1,8 +1,13 @@
-var fs = require('fs');
+var fs = require('fs-extra');
+
+global['ROOT'] = __dirname+'/../../..';
+global['ROOT_APP'] = ROOT+'/app';
 
 //============COMMAND=LINE=============
 
 if(typeof process.argv[2] != 'undefined' && typeof process.argv[3] != 'undefined') {
+  var cmd = process.argv[2];
+  var arg = process.argv[3];
   // console.log('feature not done... =/');
   // return;
 
@@ -16,18 +21,18 @@ if(typeof process.argv[2] != 'undefined' && typeof process.argv[3] != 'undefined
     is.pipe(os);
   }
 
-  if(process.argv[2] == 'controller' || process.argv[2] == 'generate' ) {
-    name = process.argv[3].capitalize();
+  if(cmd == 'controller' || cmd == 'generate' ) {
+    name = arg.capitalize();
     // console.log('generating controller ' + name + ' ...');
-    src = __dirname+'/../app/templates/controller.js';
-    dst = __dirname+'/../app/controllers/'+name+'Controller.js';
+    src = ROOT_APP+'/templates/controller.js';
+    dst = ROOT_APP+'/controllers/'+name+'Controller.js';
     copy(src,dst);
   }
-  if(process.argv[2] == 'model' || process.argv[2] == 'generate') {
-    name = process.argv[3].capitalize();
+  if(cmd == 'model' || cmd == 'generate') {
+    name = arg.capitalize();
     // console.log('generating model ' + name + ' ...');
-    src = __dirname+'/../app/templates/model.js';
-    dst = __dirname+'/../app/models/'+name+'.js';
+    src = ROOT_APP+'/templates/model.js';
+    dst = ROOT_APP+'/models/'+name+'.js';
     copy(src,dst);
   }
   return;

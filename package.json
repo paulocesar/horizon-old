@@ -7,6 +7,6 @@
     "express": "*",
     "jade": "*",
     "mongoose": "*",
-    "fs-extra": "*"
+    "wrench": "*"
   }
 }
