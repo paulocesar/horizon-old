@@ -1,5 +1,5 @@
 
-var app = require('./')({
+var app = require('../')({
   
   bootstrap: function () {
     User.findOne({}).exec(function(err,user){
