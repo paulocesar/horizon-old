@@ -2,11 +2,17 @@
   "name": "horizon",
   "description": "a REST based mvc framework",
   "version": "0.0.1",
-  "dependencies": 
-  {
-    "express": "*",
-    "jade": "*",
-    "mongoose": "*",
-    "wrench": "*"
+  "repository": {
+    "url": "git://github.com/paulocesar/horizon"
+  },
+  "bin": {
+    "horizon": "./bin/horizon"
+  },
+  "main": "./index",
+  "dependencies": {
+    "express": "3.3.4",
+    "jade": "0.34.1",
+    "mongoose": "3.6.15",
+    "wrench": "1.5.1"
   }
 }
