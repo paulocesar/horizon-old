@@ -1,12 +1,12 @@
 {
   "name": "horizon",
   "description": "a REST based mvc framework",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "url": "git://github.com/paulocesar/horizon"
   },
   "bin": {
-    "horizon": "./bin/horizon"
+    "horizon": "./bin/horizon.js"
   },
   "main": "./index",
   "dependencies": {
