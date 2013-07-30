@@ -1,4 +1,4 @@
-var fs = require('fs-extra');
+var fs = require('fs');
 
 global['ROOT'] = __dirname+'/../../..';
 global['ROOT_APP'] = ROOT+'/app';
