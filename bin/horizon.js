@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require('fs');
 
 global['ROOT'] = __dirname+'/../../..';
