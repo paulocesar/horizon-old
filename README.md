@@ -5,7 +5,7 @@ MVC Framework based on Sails.js functionalities with default user authentication
 
 ### Install
 
-First, install and run **MongoDB**. I suggest you google It =). Then create a project folder and run:
+First, install and run **MongoDB**. I suggest you google It =). Then create a project folder and execute:
 
     mkdir sample; cd sample
     npm install horizon
