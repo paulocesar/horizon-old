@@ -2,9 +2,10 @@
 
 var fs = require('fs');
 
-global['ROOT'] = __dirname+'/../../..';
+global['ROOT'] = '.';
 global['ROOT_APP'] = ROOT+'/app';
 
+console.log(ROOT);
 //============COMMAND=LINE=============
 
 if(typeof process.argv[2] != 'undefined' && typeof process.argv[3] != 'undefined') {
