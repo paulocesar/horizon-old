@@ -1,5 +1,4 @@
-
-var app = require('../')({
+var app = require('horizon')({
   
   bootstrap: function () {
     User.findOne({}).exec(function(err,user){
@@ -17,4 +16,4 @@ var app = require('../')({
 });
 
 var server = require('http').createServer(app);
-server.listen(8764);
+server.listen(5321);

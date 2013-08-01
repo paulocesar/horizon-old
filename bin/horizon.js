@@ -21,6 +21,17 @@ if(typeof process.argv[2] != 'undefined' && typeof process.argv[3] != 'undefined
     is.pipe(os);
   }
 
+  if(cmd == 'start') {
+    if(!fs.existsSync(ROOT_APP)) {
+      var wrench = require('wrench');
+      wrench.copyDirSyncRecursive(__dirname+'/../app',ROOT_APP,{});
+    }
+    name = arg.toLowerCase();
+    src = ROOT_APP+'/templates/server.js';
+    dst = ROOT+'/'+name+'.js';
+    copy(src,dst);
+  }
+
   if(cmd == 'controller' || cmd == 'generate' ) {
     name = arg.capitalize();
     // console.log('generating controller ' + name + ' ...');
