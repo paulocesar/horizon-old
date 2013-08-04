@@ -11,9 +11,15 @@ First, install and run **MongoDB**. I suggest you google It =). Then create a pr
     npm install horizon
 
 ### Run
-Create the runnable node script.
 
-	//app.js
+	npm install -g horizon
+	horizon start <app_name>
+	node <app_name>
+	//open your browser in http://localhost:5321
+
+The `horizon start` command will generate a folder called `app` and a file called `<app_name>.js`. The app folder has the MVC structure and the runnable script has the structure bellow:
+
+	//<app_name>.js
 	
 	//it returns express app
 	var app = require('horizon')({
@@ -49,17 +55,28 @@ Create the runnable node script.
 	
 	app.listen(5321);
 
-Run it!
-	
-	node app
-	//open in your browser http://localhost:5321
+The system already starts with auth and login system. To understand how it works, just look in the auto generated models, views and controllers. 
 
 ### Usage
 
-TODO...
+Now that the Horizon MVC Framework is installed, the work is only create models, views and controllers. It has a command line tool that can helps with the code generation:
+	
+	//it generates model and controller
+	horizon generate Sample
+	
+	//it generates only the controller
+	horizon controller Sample
+	
+	//it generates only the model
+	horizon model Sample
+	
+	
+Any template that generates files are found in `app/templates` directory. Developers can costumize the project's templates.
+
+**TODO: view template generation**
 
 ### Structure
-After it runs, the horizon app folder will be created automatically. This folder will have the structure bellow:
+The Horizon auto generated `app` folder has the structure bellow:
 
 	app\
 	  controllers\
