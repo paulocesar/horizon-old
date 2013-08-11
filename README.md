@@ -1,7 +1,7 @@
 Horizon
 ===============
 
-MVC Framework based on Sails.js functionalities with default user authentication system.
+Horizon is a really small MVC framework based on Sails.js with a default user authentication system. It was developed for learning purpouses. Horizon uses **express**, **mongoose** and **jade**.
 
 ### Install
 
@@ -70,10 +70,52 @@ Now that the Horizon MVC Framework is installed, the work is only create models,
 	//it generates only the model
 	horizon model Sample
 	
-	
-Any template that generates files are found in `app/templates` directory. Developers can costumize the project's templates.
 
 **TODO: view template generation**
+
+Any template that generates files are found in `app/templates` directory. Developers can costumize the project's templates.
+
+
+After generate a model and template they will have a structure like below:
+
+	//====app/models//Sample.js====
+	
+    var model = Schema({
+     _id :  ObjectId,
+     name: String,
+    });
+
+    model.path('name').required(true);
+
+    module.exports.schema = model;
+    module.exports.methods = {
+
+    };
+    
+    //===app/controllers/SampleController.js===
+    
+    module.exports = {
+    
+    };
+
+With this basic struture, the Horizon MCV already generates a basic CRUD methods. For exmaple, accessing the `localhost:5321` in the browser, you can do the basic list, add, edit and delete commands with the `Sample` strutucture using `POST` or `GET`. You can see bellow some cases using GET:
+
+	//list Samples with name paul
+	localhost:5321/sample/index?name=paul
+	
+	//Adding Sample with name paul
+	localhost:5321/sample/add?name=paul
+
+The response from those automatically generated methods are in **JSON**. Sample response:
+
+	//response from sample/index
+	[
+		{_id: 93jbca8a70bac0bac9bb, name: paul},
+		{_id: 93jbca8a70bac0bac9bb, name: amy},
+		{_id: 93jbca8a70bac0bac9bb, name: josh}
+	]
+
+**TODO: explain default Auth system**
 
 ### Structure
 The Horizon auto generated `app` folder has the structure bellow:
@@ -103,7 +145,7 @@ The Horizon auto generated `app` folder has the structure bellow:
 	  route.js
 	  utils.js
 	  
-### TODO: explain all the structure
+Please, visit the Sails.js wiki to understand the struture.
 
 ### Thanks
 TODO...

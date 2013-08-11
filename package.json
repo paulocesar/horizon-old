@@ -1,7 +1,7 @@
 {
   "name": "horizon",
-  "description": "a REST based mvc framework",
-  "version": "0.2.01",
+  "description": "A really small MVC framework based on Sails.js with default authentication system",
+  "version": "0.2.2",
   "repository": {
     "url": "git://github.com/paulocesar/horizon"
   },
