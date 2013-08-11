@@ -1,7 +1,7 @@
 Horizon
 ===============
 
-Horizon is a really small MVC framework based on Sails.js with a default user authentication system. It was developed for learning purpouses. Horizon uses **express**, **mongoose** and **jade**.
+Horizon is a really small MVC framework based on Sails.js with a default user authentication system. It was developed for learning purposes. Horizon uses **express**, **mongoose** and **jade**.
 
 ### Install
 
@@ -55,7 +55,7 @@ The `horizon start` command will generate a folder called `app` and a file calle
 	
 	app.listen(5321);
 
-The system already starts with auth and login system. To understand how it works, just look in the auto generated models, views and controllers. 
+The system already starts with a auth system. To understand how it works, just look in the auto generated models, views and controllers. 
 
 ### Usage
 
@@ -98,7 +98,7 @@ After generate a model and template they will have a structure like below:
     
     };
 
-With this basic struture, the Horizon MCV already generates a basic CRUD methods. For exmaple, accessing the `localhost:5321` in the browser, you can do the basic list, add, edit and delete commands with the `Sample` strutucture using `POST` or `GET`. You can see bellow some cases using GET:
+With this basic struture, the Horizon MCV already generates a basic CRUD. For example, accessing the `localhost:5321` in the browser, you can do the basic list, add, edit and delete commands with the `Sample` strutucture using `POST` or `GET`. You can see bellow some cases using GET:
 
 	//list Samples with name paul
 	localhost:5321/sample/index?name=paul
@@ -106,7 +106,7 @@ With this basic struture, the Horizon MCV already generates a basic CRUD methods
 	//Adding Sample with name paul
 	localhost:5321/sample/add?name=paul
 
-The response from those automatically generated methods are in **JSON**. Sample response:
+The response from those automatically generated methods are in **JSON**:
 
 	//response from sample/index
 	[
