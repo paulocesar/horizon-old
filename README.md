@@ -69,9 +69,6 @@ Now that the Horizon MVC Framework is installed, the work is only create models,
 	
 	//it generates only the model
 	horizon model Sample
-	
-
-**TODO: view template generation**
 
 Any template that generates files are found in `app/templates` directory. Developers can costumize the project's templates.
 
@@ -147,5 +144,4 @@ The Horizon auto generated `app` folder has the structure bellow:
 	  
 Please, visit the Sails.js wiki to understand the struture.
 
-### Thanks
-TODO...
+
